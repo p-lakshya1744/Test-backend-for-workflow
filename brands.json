@@ -1,0 +1,1047 @@
+{
+  "amazon": {
+    "category": "shopping",
+    "patterns": ["\\bamazon\\b", "\\bamazon\\.in\\b", "\\bamazon\\.com\\b"],
+    "sender_domains": ["@amazon.in", "@amazon.com", "@amazon.co.uk"],
+    "subject_contains": ["your amazon order", "order confirmation", "ship", "delivery"],
+    "priority": 10,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "amazon_prime": {
+    "category": "entertainment",
+    "patterns": ["\\bamazon prime\\b", "\\bprime membership\\b", "\\bprime renewal\\b"],
+    "sender_domains": ["@amazon.in", "@amazon.com"],
+    "subject_contains": ["prime membership", "prime renewal"],
+    "priority": 9,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "flipkart": {
+    "category": "shopping",
+    "patterns": ["\\bflipkart\\b"],
+    "sender_domains": ["@flipkart.com"],
+    "subject_contains": ["flipkart", "order id", "order confirmed", "shipment"],
+    "priority": 9,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "myntra": {
+    "category": "shopping",
+    "patterns": ["\\bmyntra\\b"],
+    "sender_domains": ["@myntra.com"],
+    "subject_contains": ["myntra", "order", "invoice"],
+    "priority": 8,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "ajio": {
+    "category": "shopping",
+    "patterns": ["\\bajio\\b"],
+    "sender_domains": ["@ajio.com"],
+    "subject_contains": ["ajio", "order confirmed"],
+    "priority": 7,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "nykaa": {
+    "category": "shopping",
+    "patterns": ["\\bnykaa\\b"],
+    "sender_domains": ["@nykaa.com"],
+    "subject_contains": ["nykaa", "order id", "invoice"],
+    "priority": 7,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "croma": {
+    "category": "shopping",
+    "patterns": ["\\bcroma\\b"],
+    "sender_domains": ["@croma.com", "@tata.com"],
+    "subject_contains": ["croma", "order", "invoice"],
+    "priority": 6,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "bigbasket": {
+    "category": "groceries",
+    "patterns": ["\\bbigbasket\\b", "\\bbbnow\\b"],
+    "sender_domains": ["@bigbasket.com"],
+    "subject_contains": ["bigbasket", "order confirmation", "delivery"],
+    "priority": 8,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "blinkit": {
+    "category": "groceries",
+    "patterns": ["\\bblinkit\\b", "\\bgrofers\\b"],
+    "sender_domains": ["@blinkit.com", "@grofers.com"],
+    "subject_contains": ["blinkit", "order details"],
+    "priority": 6,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "zomato": {
+    "category": "food",
+    "patterns": ["\\bzomato\\b"],
+    "sender_domains": ["@zomato.com"],
+    "subject_contains": ["zomato", "order confirmed", "receipt"],
+    "priority": 9,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "swiggy": {
+    "category": "food",
+    "patterns": ["\\bswiggy\\b"],
+    "sender_domains": ["@swiggy.in"],
+    "subject_contains": ["swiggy", "order id", "receipt"],
+    "priority": 9,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "dominos": {
+    "category": "food",
+    "patterns": ["\\bdominos?\\b", "\\bpizza hut\\b"],
+    "sender_domains": ["@dominos.in", "@pizzahut.co.in"],
+    "subject_contains": ["order", "delivery", "receipt"],
+    "priority": 6,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "uber": {
+    "category": "travel",
+    "patterns": ["\\buber\\b"],
+    "sender_domains": ["@uber.com"],
+    "subject_contains": ["your uber receipt", "trip receipt"],
+    "priority": 9,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "ola": {
+    "category": "travel",
+    "patterns": ["\\bola\\b", "\\bola cabs\\b"],
+    "sender_domains": ["@olacabs.com", "@ola.in"],
+    "subject_contains": ["ola", "trip receipt"],
+    "priority": 8,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "makemytrip": {
+    "category": "travel",
+    "patterns": ["\\bmakemytrip\\b", "\\bmmt\\b"],
+    "sender_domains": ["@makemytrip.com"],
+    "subject_contains": ["booking", "itinerary", "ticket"],
+    "priority": 8,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "irctc": {
+    "category": "travel",
+    "patterns": ["\\birctc\\b", "\\bindian railways\\b"],
+    "sender_domains": ["@irctc.co.in"],
+    "subject_contains": ["ticket", "pnr"],
+    "priority": 9,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "bookmyshow": {
+    "category": "entertainment",
+    "patterns": ["\\bbookmyshow\\b"],
+    "sender_domains": ["@bookmyshow.com"],
+    "subject_contains": ["booking confirmation", "ticket", "bookmyshow"],
+    "priority": 8,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "paytm": {
+    "category": "payments",
+    "patterns": ["\\bpaytm\\b"],
+    "sender_domains": ["@paytm.com", "@paytm.in"],
+    "subject_contains": ["payment received", "transaction", "paytm"],
+    "priority": 10,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "razorpay": {
+    "category": "payments",
+    "patterns": ["\\brazorpay\\b"],
+    "sender_domains": ["@razorpay.com"],
+    "subject_contains": ["payment", "receipt", "mandate"],
+    "priority": 2,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "stripe": {
+    "category": "payments",
+    "patterns": ["\\bstripe\\b"],
+    "sender_domains": ["@stripe.com"],
+    "subject_contains": ["invoice", "receipt", "payment"],
+    "priority": 2,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "paypal": {
+    "category": "payments",
+    "patterns": ["\\bpaypal\\b"],
+    "sender_domains": ["@paypal.com"],
+    "subject_contains": ["payment", "receipt", "paypal"],
+    "priority": 10,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "payu": {
+    "category": "payments",
+    "patterns": ["\\bpayu\\b"],
+    "sender_domains": ["@payu.in"],
+    "subject_contains": ["payment", "receipt"],
+    "priority": 6,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "cashfree": {
+    "category": "payments",
+    "patterns": ["\\bcashfree\\b"],
+    "sender_domains": ["@cashfree.com"],
+    "subject_contains": ["payment", "receipt"],
+    "priority": 6,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "ccavenue": {
+    "category": "payments",
+    "patterns": ["\\bccavenue\\b"],
+    "sender_domains": ["@ccavenue.com"],
+    "subject_contains": ["payment", "receipt"],
+    "priority": 5,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "google_play": {
+    "category": "entertainment",
+    "patterns": ["\\bgoogle play\\b", "\\bplay.google.com\\b"],
+    "sender_domains": ["@google.com"],
+    "subject_contains": ["your google play receipt", "purchase receipt"],
+    "priority": 5,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "youtube_premium": {
+    "category": "entertainment",
+    "patterns": ["\\byoutube premium\\b", "\\byoutube music\\b"],
+    "sender_domains": ["@youtube.com", "@google.com"],
+    "subject_contains": ["youtube premium", "subscription", "renewal"],
+    "priority": 9,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "netflix": {
+    "category": "entertainment",
+    "patterns": ["\\bnetflix\\b"],
+    "sender_domains": ["@mailer.netflix.com", "@netflix.com"],
+    "subject_contains": ["netflix subscription", "renewal", "membership"],
+    "priority": 10,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "spotify": {
+    "category": "entertainment",
+    "patterns": ["\\bspotify\\b"],
+    "sender_domains": ["@spotify.com"],
+    "subject_contains": ["spotify", "receipt", "renewal", "subscription"],
+    "priority": 9,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "hotstar": {
+    "category": "entertainment",
+    "patterns": ["\\bhotstar\\b", "\\bdisney\\+\\b"],
+    "sender_domains": ["@hotstar.com", "@disneyplus.com"],
+    "subject_contains": ["hotstar", "disney+", "subscription", "renewal"],
+    "priority": 8,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "zee5": {
+    "category": "entertainment",
+    "patterns": ["\\bzee5\\b"],
+    "sender_domains": ["@zee5.com"],
+    "subject_contains": ["zee5", "subscription", "renewal"],
+    "priority": 6,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "gaana": {
+    "category": "entertainment",
+    "patterns": ["\\bgaana\\b"],
+    "sender_domains": ["@gaana.com"],
+    "subject_contains": ["gaana", "subscription", "receipt"],
+    "priority": 5,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "jio": {
+    "category": "telecom",
+    "patterns": ["\\bjio\\b"],
+    "sender_domains": ["@jio.com"],
+    "subject_contains": ["recharge", "bill", "payment due"],
+    "priority": 10,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "airtel": {
+    "category": "telecom",
+    "patterns": ["\\bairtel\\b"],
+    "sender_domains": ["@airtel.in"],
+    "subject_contains": ["bill", "recharge", "payment"],
+    "priority": 10,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "vi": {
+    "category": "telecom",
+    "patterns": ["\\bvodafone\\b", "\\bvi\\b"],
+    "sender_domains": ["@vodafone.in", "@vi.com"],
+    "subject_contains": ["bill", "recharge", "payment"],
+    "priority": 8,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "sbi_mutual_fund": {
+    "category": "investments",
+    "patterns": ["\\bsbi mutual fund\\b", "\\bsbimf\\b"],
+    "sender_domains": ["@camsonline.com", "@sbimf.com"],
+    "subject_contains": ["purchase", "transaction confirmation", "folio", "statement of account"],
+    "priority": 10,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "axis_mutual_fund": {
+    "category": "investments",
+    "patterns": ["\\baxis mutual fund\\b", "\\baxismf\\b"],
+    "sender_domains": ["@kfintech.com", "@axismf.com"],
+    "subject_contains": ["statement of account", "purchase", "transaction"],
+    "priority": 9,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "groww": {
+    "category": "investments",
+    "patterns": ["\\bgroww\\b"],
+    "sender_domains": ["@groww.in"],
+    "subject_contains": ["purchase", "mutual fund", "transaction"],
+    "priority": 8,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "zerodha": {
+    "category": "investments",
+    "patterns": ["\\bzerodha\\b", "\\bcoin by zerodha\\b"],
+    "sender_domains": ["@zerodha.com"],
+    "subject_contains": ["transaction", "purchase", "statement"],
+    "priority": 8,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "icici": {
+    "category": "banking",
+    "patterns": ["\\bicici\\b", "\\bicici bank\\b"],
+    "sender_domains": ["@icicibank.com"],
+    "subject_contains": ["statement", "transaction", "debit"],
+    "priority": 9,
+    "defaultType": "others",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "hdfc": {
+    "category": "banking",
+    "patterns": ["\\bhdfc\\b", "\\bhdfc bank\\b"],
+    "sender_domains": ["@hdfcbank.com"],
+    "subject_contains": ["statement", "transaction", "debit"],
+    "priority": 9,
+    "defaultType": "others",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "axis_bank": {
+    "category": "banking",
+    "patterns": ["\\baxis bank\\b", "\\baxis\\b"],
+    "sender_domains": ["@axisbank.com"],
+    "subject_contains": ["statement", "transaction", "debit"],
+    "priority": 8,
+    "defaultType": "others",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "notion": {
+    "category": "productivity",
+    "patterns": ["\\bnotion\\b"],
+    "sender_domains": ["@notion.so"],
+    "subject_contains": ["receipt", "subscription", "payment"],
+    "priority": 7,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "slack": {
+    "category": "productivity",
+    "patterns": ["\\bslack\\b"],
+    "sender_domains": ["@slack.com"],
+    "subject_contains": ["invoice", "receipt", "subscription"],
+    "priority": 7,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "microsoft_365": {
+    "category": "productivity",
+    "patterns": ["\\bmicrosoft 365\\b", "\\boffice 365\\b", "\\boffice365\\b"],
+    "sender_domains": ["@microsoft.com"],
+    "subject_contains": ["invoice", "receipt", "subscription"],
+    "priority": 9,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "adobe": {
+    "category": "productivity",
+    "patterns": ["\\badobe\\b", "\\bcreative cloud\\b"],
+    "sender_domains": ["@adobe.com"],
+    "subject_contains": ["invoice", "receipt", "subscription"],
+    "priority": 8,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "google_workspace": {
+    "category": "productivity",
+    "patterns": ["\\bgoogle workspace\\b", "\\bgsuite\\b"],
+    "sender_domains": ["@google.com"],
+    "subject_contains": ["invoice", "receipt", "subscription"],
+    "priority": 9,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "gitHub": {
+    "category": "developer",
+    "patterns": ["\\bgithub\\b"],
+    "sender_domains": ["@github.com"],
+    "subject_contains": ["invoice", "receipt", "payment", "subscription"],
+    "priority": 8,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "gitlab": {
+    "category": "developer",
+    "patterns": ["\\bgitlab\\b"],
+    "sender_domains": ["@gitlab.com"],
+    "subject_contains": ["invoice", "receipt", "subscription"],
+    "priority": 7,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "figma": {
+    "category": "productivity",
+    "patterns": ["\\bfigma\\b"],
+    "sender_domains": ["@figma.com"],
+    "subject_contains": ["invoice", "receipt", "subscription"],
+    "priority": 7,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "slack_2": {
+    "category": "productivity",
+    "patterns": ["\\bslackhq\\b"],
+    "sender_domains": ["@slackhq.com"],
+    "subject_contains": ["invoice", "receipt", "subscription"],
+    "priority": 6,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "jira": {
+    "category": "productivity",
+    "patterns": ["\\bjira\\b", "\\batlassian\\b"],
+    "sender_domains": ["@atlassian.com"],
+    "subject_contains": ["invoice", "receipt", "subscription", "billing"],
+    "priority": 7,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "figma_2": {
+    "category": "productivity",
+    "patterns": ["\\bfigma\\b"],
+    "sender_domains": ["@figma.com"],
+    "subject_contains": ["receipt", "payment"],
+    "priority": 6,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "spotify_2": {
+    "category": "entertainment",
+    "patterns": ["\\bspotify\\b"],
+    "sender_domains": ["@spotify.com"],
+    "subject_contains": ["payment", "receipt", "subscription", "renewal"],
+    "priority": 9,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "steam": {
+    "category": "gaming",
+    "patterns": ["\\bsteam\\b", "\\bstore.steampowered.com\\b"],
+    "sender_domains": ["@steampowered.com"],
+    "subject_contains": ["purchase receipt", "order", "steam"],
+    "priority": 8,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "epic_games": {
+    "category": "gaming",
+    "patterns": ["\\bepic games\\b", "\\bepicgames\\b"],
+    "sender_domains": ["@epicgames.com"],
+    "subject_contains": ["receipt", "order", "purchase"],
+    "priority": 7,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "playstation": {
+    "category": "gaming",
+    "patterns": ["\\bplaystation\\b", "\\bpsn\\b"],
+    "sender_domains": ["@playstation.com"],
+    "subject_contains": ["receipt", "purchase", "subscription"],
+    "priority": 7,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "xbox": {
+    "category": "gaming",
+    "patterns": ["\\bxbox\\b"],
+    "sender_domains": ["@xbox.com", "@microsoft.com"],
+    "subject_contains": ["receipt", "subscription", "purchase"],
+    "priority": 7,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "steam_wallet": {
+    "category": "gaming",
+    "patterns": ["\\bwallet\\b", "\\bsteam wallet\\b"],
+    "sender_domains": ["@steampowered.com"],
+    "subject_contains": ["receipt", "purchase"],
+    "priority": 5,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "upstox": {
+    "category": "investments",
+    "patterns": ["\\bupstox\\b"],
+    "sender_domains": ["@upstox.com"],
+    "subject_contains": ["statement", "transaction", "payment"],
+    "priority": 6,
+    "defaultType": "others",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "kuvera": {
+    "category": "investments",
+    "patterns": ["\\bkuvera\\b"],
+    "sender_domains": ["@kuvera.in"],
+    "subject_contains": ["statement", "transaction", "purchase"],
+    "priority": 5,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "smallcase": {
+    "category": "investments",
+    "patterns": ["\\bsmallcase\\b"],
+    "sender_domains": ["@smallcase.com"],
+    "subject_contains": ["invoice", "order", "purchase"],
+    "priority": 5,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "groww_2": {
+    "category": "investments",
+    "patterns": ["\\bgroww\\b"],
+    "sender_domains": ["@groww.in"],
+    "subject_contains": ["mutual fund", "purchase", "statement"],
+    "priority": 7,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "paytm_insider": {
+    "category": "events",
+    "patterns": ["\\bpaytm insider\\b", "\\binsider\\b"],
+    "sender_domains": ["@paytm.com", "@paytm.in"],
+    "subject_contains": ["ticket", "booking", "order"],
+    "priority": 6,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "townscript": {
+    "category": "events",
+    "patterns": ["\\btownscript\\b"],
+    "sender_domains": ["@townscript.com"],
+    "subject_contains": ["ticket", "booking", "order"],
+    "priority": 5,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "konfhub": {
+    "category": "events",
+    "patterns": ["\\bkonfhub\\b"],
+    "sender_domains": ["@konfhub.com"],
+    "subject_contains": ["ticket", "booking", "order"],
+    "priority": 5,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "commudle": {
+    "category": "events",
+    "patterns": ["\\bcommudle\\b"],
+    "sender_domains": ["@commudle.com"],
+    "subject_contains": ["event", "ticket", "booking"],
+    "priority": 4,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "bookmyshow_2": {
+    "category": "events",
+    "patterns": ["\\bbookmyshow\\b"],
+    "sender_domains": ["@bookmyshow.com"],
+    "subject_contains": ["ticket", "booking", "order"],
+    "priority": 8,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "hotels_com": {
+    "category": "travel",
+    "patterns": ["\\bhotels?\\.com\\b", "\\bbooking.com\\b"],
+    "sender_domains": ["@hotels.com", "@booking.com"],
+    "subject_contains": ["booking confirmation", "reservation", "itinerary"],
+    "priority": 7,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "make_my_trip": {
+    "category": "travel",
+    "patterns": ["\\bmake my trip\\b", "\\bmakemytrip\\b"],
+    "sender_domains": ["@makemytrip.com"],
+    "subject_contains": ["booking", "itinerary", "ticket"],
+    "priority": 8,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "airbnb": {
+    "category": "travel",
+    "patterns": ["\\bairbnb\\b"],
+    "sender_domains": ["@airbnb.com"],
+    "subject_contains": ["booking confirmation", "reservation", "itinerary"],
+    "priority": 7,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "redbus": {
+    "category": "travel",
+    "patterns": ["\\bredbus\\b"],
+    "sender_domains": ["@redbus.in"],
+    "subject_contains": ["ticket", "booking", "itinerary"],
+    "priority": 6,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "ola_money": {
+    "category": "payments",
+    "patterns": ["\\bola money\\b", "\\bolamoney\\b"],
+    "sender_domains": ["@ola.in"],
+    "subject_contains": ["payment", "receipt", "transaction"],
+    "priority": 5,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "apple": {
+    "category": "entertainment",
+    "patterns": ["\\bapple\\b", "\\bitunes\\b", "\\bapple music\\b"],
+    "sender_domains": ["@apple.com"],
+    "subject_contains": ["receipt", "invoice", "order", "subscription"],
+    "priority": 10,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "google": {
+    "category": "productivity",
+    "patterns": ["\\bgoogle cloud\\b", "\\bgoogle payments\\b"],
+    "sender_domains": ["@google.com"],
+    "subject_contains": ["invoice", "receipt", "subscription"],
+    "priority": 9,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "aws": {
+    "category": "cloud",
+    "patterns": ["\\bamazon web services\\b", "\\baws\\b"],
+    "sender_domains": ["@amazon.com", "@aws.amazon.com"],
+    "subject_contains": ["invoice", "billing", "statement", "payment"],
+    "priority": 9,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "azure": {
+    "category": "cloud",
+    "patterns": ["\\bmicrosoft azure\\b", "\\bazure\\b"],
+    "sender_domains": ["@microsoft.com", "@azure.com"],
+    "subject_contains": ["invoice", "billing", "statement"],
+    "priority": 8,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "digitalocean": {
+    "category": "cloud",
+    "patterns": ["\\bdigitalocean\\b"],
+    "sender_domains": ["@digitalocean.com"],
+    "subject_contains": ["invoice", "receipt", "billing"],
+    "priority": 6,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "github": {
+    "category": "developer",
+    "patterns": ["\\bgithub\\b"],
+    "sender_domains": ["@github.com"],
+    "subject_contains": ["receipt", "invoice", "subscription", "billing"],
+    "priority": 8,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "bitbucket": {
+    "category": "developer",
+    "patterns": ["\\bbitbucket\\b"],
+    "sender_domains": ["@bitbucket.org", "@atlassian.com"],
+    "subject_contains": ["invoice", "receipt"],
+    "priority": 5,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "heroku": {
+    "category": "cloud",
+    "patterns": ["\\bheroku\\b"],
+    "sender_domains": ["@heroku.com"],
+    "subject_contains": ["invoice", "receipt", "billing"],
+    "priority": 5,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "digital_wallet_generic": {
+    "category": "payments",
+    "patterns": ["\\bwallet\\b", "\\bdigital wallet\\b"],
+    "sender_domains": [],
+    "subject_contains": ["payment", "receipt", "transaction"],
+    "priority": 2,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.4, "sender": 0.5, "subject": 0.1}
+  },
+  "uber_eats": {
+    "category": "food",
+    "patterns": ["\\buber eats\\b", "\\bubereats\\b"],
+    "sender_domains": ["@uber.com"],
+    "subject_contains": ["order", "receipt", "ubereats"],
+    "priority": 6,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "zomato_gold": {
+    "category": "entertainment",
+    "patterns": ["\\bzomato gold\\b"],
+    "sender_domains": ["@zomato.com"],
+    "subject_contains": ["subscription", "renewal", "zomato gold"],
+    "priority": 5,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "cultfit": {
+    "category": "fitness",
+    "patterns": ["\\bcult\\.fit\\b", "\\bcult fit\\b"],
+    "sender_domains": ["@cult.fit"],
+    "subject_contains": ["membership", "subscription", "receipt"],
+    "priority": 6,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "healthifyme": {
+    "category": "fitness",
+    "patterns": ["\\bhealthifyme\\b"],
+    "sender_domains": ["@healthifyme.com"],
+    "subject_contains": ["subscription", "membership", "receipt"],
+    "priority": 5,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "ultrahuman": {
+    "category": "fitness",
+    "patterns": ["\\bultrahuman\\b"],
+    "sender_domains": ["@ultrahuman.com"],
+    "subject_contains": ["subscription", "receipt"],
+    "priority": 4,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "udemy": {
+    "category": "study",
+    "patterns": ["\\budemy\\b"],
+    "sender_domains": ["@udemy.com"],
+    "subject_contains": ["purchase", "receipt", "invoice"],
+    "priority": 8,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "coursera": {
+    "category": "study",
+    "patterns": ["\\bcoursera\\b"],
+    "sender_domains": ["@coursera.org"],
+    "subject_contains": ["subscription", "invoice", "receipt"],
+    "priority": 7,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "skillshare": {
+    "category": "study",
+    "patterns": ["\\bskillshare\\b"],
+    "sender_domains": ["@skillshare.com"],
+    "subject_contains": ["subscription", "receipt"],
+    "priority": 6,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "byjus": {
+    "category": "study",
+    "patterns": ["\\bbyju'?s?\\b", "\\bbyjus\\b"],
+    "sender_domains": ["@byjus.com"],
+    "subject_contains": ["subscription", "invoice", "receipt"],
+    "priority": 6,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "unacademy": {
+    "category": "study",
+    "patterns": ["\\bunacademy\\b"],
+    "sender_domains": ["@unacademy.com"],
+    "subject_contains": ["subscription", "invoice", "receipt"],
+    "priority": 6,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "drivezy": {
+    "category": "mobility",
+    "patterns": ["\\bdrivezy\\b"],
+    "sender_domains": ["@drivezy.com"],
+    "subject_contains": ["booking", "receipt", "invoice"],
+    "priority": 3,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "redmart": {
+    "category": "groceries",
+    "patterns": ["\\bredmart\\b"],
+    "sender_domains": ["@redmart.com"],
+    "subject_contains": ["order", "invoice", "receipt"],
+    "priority": 3,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "ola_cabs": {
+    "category": "travel",
+    "patterns": ["\\bola cabs\\b", "\\bola rides\\b"],
+    "sender_domains": ["@olacabs.com"],
+    "subject_contains": ["trip receipt", "invoice", "booking"],
+    "priority": 6,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "phonepe": {
+    "category": "payments",
+    "patterns": ["\\bphonepe\\b"],
+    "sender_domains": ["@phonepe.com"],
+    "subject_contains": ["transaction", "payment", "receipt"],
+    "priority": 8,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "hdfc_life": {
+    "category": "insurance",
+    "patterns": ["\\bhdfc life\\b", "\\bhdfclife\\b"],
+    "sender_domains": ["@hdfclife.com"],
+    "subject_contains": ["premium", "invoice", "renewal"],
+    "priority": 6,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "lic": {
+    "category": "insurance",
+    "patterns": ["\\blic\\b", "\\blic india\\b", "\\blic of india\\b"],
+    "sender_domains": ["@licindia.in"],
+    "subject_contains": ["premium", "renewal", "receipt"],
+    "priority": 7,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "tata_aig": {
+    "category": "insurance",
+    "patterns": ["\\btata aig\\b", "\\btaig\\b"],
+    "sender_domains": ["@tataaig.com"],
+    "subject_contains": ["premium", "receipt", "renewal"],
+    "priority": 5,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "swyftx": {
+    "category": "crypto",
+    "patterns": ["\\bswyftx\\b"],
+    "sender_domains": ["@swyftx.com"],
+    "subject_contains": ["receipt", "transaction", "trade"],
+    "priority": 2,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "coinbase": {
+    "category": "crypto",
+    "patterns": ["\\bcoinbase\\b"],
+    "sender_domains": ["@coinbase.com"],
+    "subject_contains": ["receipt", "transaction", "trade"],
+    "priority": 5,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "stripe_2": {
+    "category": "payments",
+    "patterns": ["\\bstripe invoices\\b", "\\bstripe\\b"],
+    "sender_domains": ["@stripe.com"],
+    "subject_contains": ["invoice", "receipt"],
+    "priority": 7,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "visa_mastercard_generic": {
+    "category": "payments",
+    "patterns": ["\\bvisa\\b", "\\bmastercard\\b"],
+    "sender_domains": [],
+    "subject_contains": ["statement", "transaction", "payment"],
+    "priority": 2,
+    "defaultType": "others",
+    "score_weights": {"pattern": 0.4, "sender": 0.5, "subject": 0.1}
+  },
+  "gmail_promotions": {
+    "category": "others",
+    "patterns": ["\\bgmail promotions\\b", "\\bnewsletters\\b"],
+    "sender_domains": [],
+    "subject_contains": ["unsubscribe", "newsletter", "offer"],
+    "priority": 1,
+    "defaultType": "others",
+    "score_weights": {"pattern": 0.2, "sender": 0.2, "subject": 0.6}
+  },
+  "etsy": {
+    "category": "shopping",
+    "patterns": ["\\betsy\\b"],
+    "sender_domains": ["@etsy.com"],
+    "subject_contains": ["order", "receipt", "invoice"],
+    "priority": 5,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "ebay": {
+    "category": "shopping",
+    "patterns": ["\\bebay\\b"],
+    "sender_domains": ["@ebay.com"],
+    "subject_contains": ["order", "invoice", "receipt"],
+    "priority": 6,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "croma_2": {
+    "category": "shopping",
+    "patterns": ["\\bcroma\\b"],
+    "sender_domains": ["@croma.com"],
+    "subject_contains": ["order", "invoice"],
+    "priority": 4,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "ikea": {
+    "category": "shopping",
+    "patterns": ["\\bikea\\b"],
+    "sender_domains": ["@ikea.com"],
+    "subject_contains": ["order", "invoice", "receipt"],
+    "priority": 4,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "pepperfry": {
+    "category": "shopping",
+    "patterns": ["\\bpepperfry\\b"],
+    "sender_domains": ["@pepperfry.com"],
+    "subject_contains": ["order", "invoice", "receipt"],
+    "priority": 4,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "olx": {
+    "category": "shopping",
+    "patterns": ["\\bolx\\b"],
+    "sender_domains": ["@olx.in"],
+    "subject_contains": ["order", "payment", "invoice"],
+    "priority": 3,
+    "defaultType": "others",
+    "score_weights": {"pattern": 0.4, "sender": 0.5, "subject": 0.1}
+  },
+  "snapdeal": {
+    "category": "shopping",
+    "patterns": ["\\bsnapdeal\\b"],
+    "sender_domains": ["@snapdeal.com"],
+    "subject_contains": ["order", "invoice", "receipt"],
+    "priority": 3,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  },
+  "reliance_digital": {
+    "category": "shopping",
+    "patterns": ["\\breliance digital\\b", "\\breliance digital store\\b"],
+    "sender_domains": ["@reliancedigital.in"],
+    "subject_contains": ["order", "invoice"],
+    "priority": 4,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "spotify_3": {
+    "category": "entertainment",
+    "patterns": ["\\bspotify\\b"],
+    "sender_domains": ["@spotify.com"],
+    "subject_contains": ["renewal", "receipt", "payment"],
+    "priority": 9,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "microsoft_store": {
+    "category": "shopping",
+    "patterns": ["\\bmicrosoft store\\b", "\\bms store\\b"],
+    "sender_domains": ["@microsoft.com"],
+    "subject_contains": ["order", "receipt", "invoice"],
+    "priority": 6,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "adobe_2": {
+    "category": "productivity",
+    "patterns": ["\\badobe subscription\\b", "\\badobe\\b"],
+    "sender_domains": ["@adobe.com"],
+    "subject_contains": ["receipt", "invoice", "subscription"],
+    "priority": 8,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "notion_2": {
+    "category": "productivity",
+    "patterns": ["\\bnotion.so\\b", "\\bnotion\\b"],
+    "sender_domains": ["@notion.so"],
+    "subject_contains": ["receipt", "subscription", "payment"],
+    "priority": 7,
+    "defaultType": "subscription",
+    "score_weights": {"pattern": 0.6, "sender": 0.3, "subject": 0.1}
+  },
+  "konfhb": {
+    "category": "events",
+    "patterns": ["\\bkonfhub\\b"],
+    "sender_domains": ["@konfhub.com"],
+    "subject_contains": ["ticket", "booking", "order"],
+    "priority": 3,
+    "defaultType": "purchase",
+    "score_weights": {"pattern": 0.5, "sender": 0.4, "subject": 0.1}
+  }
+  
+}
